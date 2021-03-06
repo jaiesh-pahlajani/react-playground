@@ -10,13 +10,29 @@
 </head>
 <body>
 
-    <div id="container"></div>
 
+    <div id="example"></div>
+
+    <!-- Converts JSX to JS -->
     <script type="text/babel">
-        ReactDOM.render(
-            <h2>Welcome to React!</h2>,
-            document.getElementById('container')
-        );
+
+    // This is a component
+        var PepperPots = React.createClass({
+            render: function () {
+                return (
+                    <div>
+                        <h2>Hey, Pepper Pots here!</h2>
+                        <p> I am from Marvel </p>
+                    </div>
+                    )
+            }
+        });
+
+        // Renders multiple components
+        ReactDOM.render(<div>
+                <PepperPots/>
+                <PepperPots/>
+            </div>, document.getElementById('example'));
     </script>
 
 </body>
